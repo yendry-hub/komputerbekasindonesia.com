@@ -218,6 +218,7 @@
 	<footer>
 		<div class="container">
 			<div class="row">
+				<span id="counter">0</span>
 				<div class="col-md-12">
 					<ul class="social-icon wow fadeIn" data-wow-delay="0.3s">
 						<li><a href="#" class="fa fa-facebook"></a></li>
@@ -264,6 +265,18 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-221539516-1');
+
+// Check if the counter is already stored in local storage
+        if (localStorage.getItem('pageCounter') === null) {
+            localStorage.setItem('pageCounter', 0);
+        }
+
+        // Increment the counter
+        let counter = parseInt(localStorage.getItem('pageCounter')) + 1;
+        localStorage.setItem('pageCounter', counter);
+
+        // Display the counter on the page
+        document.getElementById('counter').innerText = counter;
 </script>
 </body>
 </html>
