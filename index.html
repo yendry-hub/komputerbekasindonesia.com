@@ -268,18 +268,6 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-221539516-1');
-
-// Check if the counter is already stored in local storage
-        if (localStorage.getItem('pageCounter') === null) {
-            localStorage.setItem('pageCounter', 0);
-        }
-
-        // Increment the counter
-        let counter = parseInt(localStorage.getItem('pageCounter')) + 1;
-        localStorage.setItem('pageCounter', counter);
-
-        // Display the counter on the page
-        document.getElementById('counter').innerText = counter;
 </script>
 </body>
 </html>
