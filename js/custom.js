@@ -1,7 +1,6 @@
 // WA click
 document.getElementById('whatsappButton').addEventListener('click', function() {
-    // Send an AJAX request to the server to log the click
-    fetch('/waclick.php', { method: 'POST' });
+    fetch('https://logclick.sibayakkomputer.id/log_click.php', { method: 'POST' });
   });
 
 // preloader
