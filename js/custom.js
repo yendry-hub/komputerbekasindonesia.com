@@ -1,3 +1,8 @@
+// WA click
+document.getElementById('whatsappButton').addEventListener('click', function() {
+    // Send an AJAX request to the server to log the click
+    fetch('/waclick.php', { method: 'POST' });
+  });
 
 // preloader
 $(window).load(function(){
@@ -80,7 +85,4 @@ $(document).ready(function() {
 	new WOW().init();
 });
 
-document.getElementById('whatsappButton').addEventListener('click', function() {
-    // Send an AJAX request to the server to log the click
-    fetch('/log_click.php', { method: 'POST' });
-  });
+
